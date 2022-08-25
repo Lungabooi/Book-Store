@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const con = require("../lib/db_connection");
 
-
+//get all users
 router.get("/", (req, res) => {
     try {
         con.query("SELECT * FROM users", (err, result) => {
